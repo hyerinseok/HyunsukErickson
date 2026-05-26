@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Hyunsuk Erickson</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Comfortaa|M+PLUS+Rounded+1c&display=swap');
+
+        * {box-sizing: border-box;}
+
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            perspective: 1px;
+            transform-style: preserve-3d;
+            height: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            font-family: 'Comfortaa';
+        }
+
+        h1 {
+            font-size: 250%;
+        }
+
+        p, li {
+            font-size: 140%;
+            line-height: 150%;
+            color: #333;
+        }
+
+        header {
+            overflow: hidden;
+            padding: 50px;
+        }
+
+        header a {
+            float: left;
+            text-align: center;
+            padding: 12px;
+            font-size: 18px; 
+            line-height: 25px;
+            border-radius: 4px;
+            color: #003399;
+        }
+
+        .header-right {
+            float: right;
+        }
+
+        a {
+            text-decoration: none; 
+            position: relative;
+            z-index: auto;
+            color: #003399;
+        }
+
+        @media screen and (max-width: 500px) {
+            header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            
+            .header-right {
+                float: none;
+            }
+        }
+
+        .intro {
+            position: relative;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        .intro > * {
+            padding: 5px;
+        }
+
+        .intro img{
+            max-height: 250px;
+            transform: translateZ(.1px) scale(0.9) rotate(3deg);
+            border-radius: 5px;
+            background: rgba(240, 230, 220, .7);
+            box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+        }
+
+        .resume_body {
+            position: relative;
+            padding: 20px 10%;
+            min-height: 100px;
+            width: 100%;
+            box-sizing: border-box;
+            transform-style: inherit;
+        }
+
+    </style>
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+    <header>
+
+        <a href="/" class="logo"><h1>Hyunsuk Erickson</h1></a>
+        <div class="header-right">
+            <a href="work.html">Work</a>
+            <a href="news.html">News</a>
+            <a href="bio.html">Bio</a>
+        </div>
+    </header>
+
+
+    <div class="resume_body">
+        <div>
+            <p>
+                <a href="https://www.linkedin.com/in/hyerin-seok/">LinkedIn</a>
+                 | 
+                <a href="mailto:hyerinseok1@gmail.com">Email</a>
+                 | 
+                <a href="assets/Seok_Hyerin_CV.pdf">PDF version</a>
+            </p>
+        </div>
+
+        <div class="intro">
+            <img src="assets/img/hyerin.jpg" />
+            <div>
+                <h1>Hyerin Seok</h1>
+                <h2>
+                    Software Engineer
+                </w>
+                    Bay Area, CA
+                </h2>
+                <p>
+                    HCI forward Software Developer with experience in UI/UX Design Prototyping, Spatial Computing, Mixed Reality, Game Dev, Web Dev.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h2>
+                Technical Skills
+            </h2>
+            <ul>
+                <li>Unity3D(C#), Javascript/Typescript, Python(Godot), HTML, CSS, Restful APIs, MySQL, Unreal(C++)</li>
+                <li>OpenCV, Mobile Dev, Microcontroller(Arduino, Sparkfun, etc)</li>
+            </ul>
+            <h2>
+                Professional Experiences
+            </h2>
+            
+            <hr />
+            <div>
+                <h3>
+                    Prototyper | Meta | Burlingame, CA
+                </h3>
+                <p>
+                    Built prototypes to showcase potential use cases of Extended Reality(XR) technologies in partnership with product designers, engineers, and other prototypers. Responsibilities :
+        Developed and launched new features for Meta’s FoA(Family of Apps)
+                    <br><br>
+        Supported product designers and engineers through research, design, and prototyping, ensuring interdisciplinary flexibility
+        Rapidly iterated prototypes for Mixed Reality(MR) and mobile platforms in real-time 3D development environments, such as Unity 3D(C#), Spark(Javascript, Typescript), and internal tools
+        Created documentation to provide guidance and feedback to collaborators in other disciplines
+
+                </p>
+            </div>
+            <hr />
+            <div>
+                <h3>
+                    Research Engineer | CU Boulder ATLAS Institute | Boulder, CO
+                </h3>
+                <p>
+                    Collaborated with peers to creatively explore and implement novel human-computer interaction ideas. Accomplishments include:
+                    <br><br>
+        Participated in multiple projects that utilized Virtual Reality (VR) and Augmented Reality (AR) technology to innovate solutions for modern-day tasks via Unity
+Using Python and Arduino-based microcontrollers, created unique forms of person-to-person communication such as a device that informed a remote reader where you were reading in a book by using conductive paper
+Applied machine-learning techniques in Python to a collaborative project using supervised linear regression that visualizes clusters of movie trends based on current popular movie titles from TMDB API
+Worked as a teaching assistant for a Data Structures and Algorithms class. Taught Java to college students in a coding lab, while also attending to other teaching assistant duties
+
+                </p>
+            </div>
+
+            <hr />
+            <div>
+                <h3>
+                    Software Engineer | Connect4Education.com | Herndon, VA
+                </h3>
+                <p>
+                    Worked as a full-stack developer in a team-oriented environment. Maintained and developed online Learning Management System (LMS) software. Duties Include:
+                    <br><br>
+        Worked with instructional designers to build content, tools, and platforms for E-learning software, using database tools and Application Programming Interfaces (APIs) such as AWS, DreamFactory REST API, Canvas, Blackboard, etc.
+Participated in projects ranging from groups of 10+ collaborators to solo development projects
+Created web apps, web pages, and C# Unity applications for an array of platforms, such as the web, mobile devices, and Microsoft Hololens
+Solved Web Accessibility Issues in E-Learning using Javascript for NVDA users
+
+                </p>
+            </div>
+
+            
+            <hr />
+            <div>
+                <h3>
+                    Research Engineer | University of Texas at Dallas | Richardson, TX
+                </h3>
+                
+            </div>
+
+            <hr />
+            <div>
+                <h3>
+                    QA Engineering Intern | Microsoft, Inc | Seoul, Korea
+                </h3>
+                
+            </div>
+            <hr />
+            <div>
+                <h3>
+                    Web developer | Ukemania, Inc | Seoul, Korea
+                </h3>
+                
+            </div>
+
+            <hr />
+
+        </div>
+
+        <div>
+            <h2>Education</h2>
+            <div>
+                <h3>Master of Science in Computer Science, Interactive Computing Track</h3>
+                <p>University of Texas at Dallas</p>
+                <h3>Bachelor of Science in Multimedia Science, Computer & Information Science</h3>
+                <p>Sookmyung Women's University</p>
+            </div>
+        </div>
+
+        <div>
+            <h2>Other</h2>
+            <p>Artist, Baker, Cat mom.</p>
+        </div>
+    </div>
+</body>
+
+</html>
