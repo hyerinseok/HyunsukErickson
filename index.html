@@ -158,6 +158,35 @@
             position: relative;
             z-index: auto;
         }
+        #title {
+            z-index: 50 !important;
+        }
+
+        #title h1 {
+            transform-origin: 50% 100%;
+        }
+
+        #slide_end {
+            background: lightblue;
+            display: grid;
+            grid-template-columns: 70% auto;
+            z-index: 5 !important;
+            position: fixed;
+            bottom: 0;
+            align-content: center;  /* Vertical block-axis center */
+        }
+
+        .footer>*{
+            margin: 2px;
+        }
+
+        img.socialmedia {
+            width: 5%;
+            align-content: center;
+            margin: 2px;
+            float: right;
+        }
+
         
         @media screen and (max-width: 500px) {
             header {
@@ -182,35 +211,13 @@
                 grid-template-columns: none;
             }
 
-        }
+            img.socialmedia {
+                width: 25%;
+                align-content: center;
+                margin: 2px;
+            }
 
-        #title {
-            z-index: 50 !important;
-        }
-
-        #title h1 {
-            transform-origin: 50% 100%;
-        }
-
-        #slide_end {
-            background: lightblue;
-            display: grid;
-            grid-template-columns: 70% auto;
-            z-index: 5 !important;
-            position: fixed;
-            bottom: 0;
-            align-content: center;  /* Vertical block-axis center */
-        }
-
-        .footer>h3{
-            margin: 2px;
-        }
-
-        img.socialmedia {
-            width: 5%;
-            align-content: center;
-            margin: 2px;
-            float: right;
+            
         }
 
     </style>
@@ -234,7 +241,7 @@
     <div id="slide_end" class="slide header">
         <div class="footer">
             <h3>Hyunsuk Erickson</h3>
-            © All Rights Reserved​​
+            <p>© All Rights Reserved​​</p>
         </div>
         <div class="socialmedia">
             <img class="socialmedia" src="assets/img/instagram.png">
