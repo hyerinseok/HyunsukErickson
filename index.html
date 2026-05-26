@@ -193,14 +193,17 @@
         }
 
         img.socialmedia {
-            width: 5%;
+            width: 1%;
             align-content: center;
             margin: auto;
         }
 
         #slide_end {
             background: lightblue;
+            display: grid;
+            grid-template-columns: auto 70% auto;
         }
+
     </style>
     <meta name="theme-color" content="#fafafa">
 </head>
@@ -224,8 +227,10 @@
         <div class="peekaboo header">
             © All Rights Reserved​​
         </div>
-        <img class="socialmedia" src="assets/img/instagram.png">
-        <img class="socialmedia" src="assets/img/facebook.png">
+        <div class="socialmedia">
+            <img class="socialmedia" src="assets/img/instagram.png">
+            <img class="socialmedia" src="assets/img/facebook.png">
+        </div>
     </div>
 
     <script src="js/vendor/modernizr-3.8.0.min.js"></script>
