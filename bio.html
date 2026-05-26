@@ -11,7 +11,10 @@
     <link rel="apple-touch-icon" href="icon.png">
 
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Comfortaa|M+PLUS+Rounded+1c&display=swap');
+        @font-face {
+            font-family: GeoSans; /* set name */
+            src: url(assets/fonts/geo-sans-light/GeosansLight.ttf); /* url of the font */
+        }
 
         * {box-sizing: border-box;}
 
@@ -28,7 +31,7 @@
             height: 100%;
             overflow-y: scroll;
             overflow-x: hidden;
-            font-family: 'Comfortaa';
+            font-family: 'GeoSans';
         }
 
         h1 {
@@ -90,8 +93,8 @@
         }
 
         .intro img{
-            max-height: 250px;
-            transform: translateZ(.1px) scale(0.9) rotate(3deg);
+            max-height: 500px;
+            transform: translateZ(.1px);
             border-radius: 5px;
             background: rgba(240, 230, 220, .7);
             box-shadow: 0 0 8px rgba(0, 0, 0, .7);
