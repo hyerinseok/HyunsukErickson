@@ -11,7 +11,10 @@
     <link rel="apple-touch-icon" href="icon.png">
 
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Comfortaa|M+PLUS+Rounded+1c&display=swap');
+        @font-face {
+            font-family: GeoSans; /* set name */
+            src: url(assets/fonts/geo-sans-light/GeosansLight.ttf); /* url of the font */
+        }
 
         * {box-sizing: border-box;}
 
@@ -28,7 +31,7 @@
             height: 100%;
             overflow-y: scroll;
             overflow-x: hidden;
-            font-family: 'Comfortaa';
+            font-family: 'GeoSans';
             color: #003399;
         }
 
@@ -192,7 +195,7 @@
 <body>
     <header>
 
-        <a href="/" class="logo"><h1>Hyunsuk Erickson</h1></a>
+        <a href="index.html" class="logo"><h1>Hyunsuk Erickson</h1></a>
         <div class="header-right">
             <a href="work.html">Work</a>
             <a href="news.html">News</a>
