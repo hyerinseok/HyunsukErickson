@@ -137,7 +137,8 @@
             position: absolute;
             top: 50%;
             width: 100%;
-            @include transform(translateY(-50%));
+            transform: translateY(-50%);
+            /*@include transform(translateY(-50%));*/
 
             label {
                 display: none;
@@ -166,7 +167,8 @@
                 width: 10px;
                 height: 10px;
                 background: #bbb;
-                @include transition(all 0.3s);
+                transition: all 0.3s;
+                /*@include transition(all 0.3s);*/
 
                 &:hover {
                     background: #ccc;
@@ -183,7 +185,8 @@
             opacity: 0;
             color: #000;
             text-align: left;
-            @include transition(all 1000ms ease-out 600ms);
+            transition: all 1000ms ease-out 600ms;
+            /*@include transition(all 1000ms ease-out 600ms);*/
 
             h3 {
                 color: #fcfff4;
@@ -222,12 +225,20 @@
             box-shadow: 1px 1px 4px #666;
             background: #fff;
             background: #fcfff4;
+            transform: translateZ(0);
+            transition: all 500ms ease-out;
+            /*
             @include transform(translateZ(0));
             @include transition(all 500ms ease-out);
+            */
 
             .inner {
+                transform: translateZ(0);
+                transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+                /*
                 @include transform(translateZ(0));
                 @include transition(all 800ms cubic-bezier(0.77, 0, 0.175, 1));
+                */
             }
         }
 
