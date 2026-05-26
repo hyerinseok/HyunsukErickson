@@ -50,10 +50,11 @@
             perspective: 1px;
             transform-style: preserve-3d;
             height: 100%;
-            overflow-y: scroll;
+            overflow-y: hidden;
             overflow-x: hidden;
             font-family: 'GeoSans';
             color: #003399;
+            position: relative;
         }
 
         h1 {
@@ -187,24 +188,21 @@
             transform-origin: 50% 100%;
         }
 
-        .peekaboo {
-            z-index: -50;
-            position: sticky;
-            width: 100%;
-            bottom: 1px;
-        }
-
-        img.socialmedia {
-            width: 1%;
-            align-content: center;
-            margin: auto;
-        }
-
         #slide_end {
             background: lightblue;
             display: grid;
             grid-template-columns: auto auto;
-            z-index: 50 !important;
+            z-index: 5 !important;
+            position: fixed;
+            bottom: 0;
+            text-align: center;     /* Horizontal text center */
+            align-content: center;  /* Vertical block-axis center */
+        }
+
+        img.socialmedia {
+            width: 5%;
+            align-content: center;
+            margin: auto;
         }
 
     </style>
@@ -226,7 +224,7 @@
     </div>
     
     <div id="slide_end" class="slide header">
-        <div class="peekaboo header">
+        <div class="footer">
             <h1>Hyunsuk Erickson</h1>
             © All Rights Reserved​​
         </div>
