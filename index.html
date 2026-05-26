@@ -109,7 +109,7 @@
 
         #main_image:before {
             background-image: url(assets/img/home_image.webp);
-            transform: translateZ(-1px) scale(2);
+            transform: translateZ(-0.7px) scale(2);
         }
 
         .showOff {
@@ -203,7 +203,8 @@
         #slide_end {
             background: lightblue;
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: auto auto;
+            z-index: 50 !important;
         }
 
     </style>
@@ -225,8 +226,8 @@
     </div>
     
     <div id="slide_end" class="slide header">
-        <h1>Hyunsuk Erickson</h1>
         <div class="peekaboo header">
+            <h1>Hyunsuk Erickson</h1>
             © All Rights Reserved​​
         </div>
         <div class="socialmedia">
