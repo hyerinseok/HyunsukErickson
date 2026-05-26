@@ -29,16 +29,87 @@
             overflow-y: scroll;
             overflow-x: hidden;
             font-family: 'Comfortaa';
+            color: #003399;
         }
 
         h1 {
             font-size: 250%;
         }
 
-        p, li {
+        p {
             font-size: 140%;
             line-height: 150%;
             color: #333;
+        }
+
+        .slide {
+            position: relative;
+            padding: 20px 10%;
+            min-height: 100px;
+            width: 100%;
+            box-sizing: border-box;
+            transform-style: inherit;
+        }
+
+        .slide:before {
+            content: "";
+            position: absolute;
+            top: 125px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .title {
+            width: 50%;
+            padding: 5%;
+            border-radius: 5px;
+            background: rgba(240, 230, 220, .7);
+        }
+
+        .slide:nth-child(2n+1) .title {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .slide:nth-child(2n) .title {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .showOff {
+            max-width: 40%;
+            height: stretch;
+        }
+
+        .showOff > *{
+            max-width: stretch;
+            max-height: stretch;
+            transform: translateZ(.1px) scale(0.9) rotate(3deg);
+            border-radius: 5px;
+            background: rgba(240, 230, 220, .7);
+            box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+        }
+
+        .slide:nth-child(2n+1) .showOff{
+            position: absolute;
+            top: 5%;
+            right: 10%;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .slide:nth-child(2n) .showOff{
+            position: absolute;
+            top: 5%;
+            left: 10%;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .slide,
+        .slide:before {
+            background: 50% 50% / cover;
         }
 
         header {
@@ -61,12 +132,11 @@
         }
 
         a {
-            text-decoration: none; 
+            text-decoration: none;
             position: relative;
             z-index: auto;
-            color: #003399;
         }
-
+        
         @media screen and (max-width: 500px) {
             header a {
                 float: none;
@@ -77,35 +147,44 @@
             .header-right {
                 float: none;
             }
+
+            .slide .title {
+                width : 100%;
+            }
+
+            .slide:nth-child(n) .showOff{
+                max-width: 100%;
+                position: relative;
+                top: auto;
+                left: auto;
+                right: auto;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
-        .intro {
-            position: relative;
-            display: grid;
-            grid-template-columns: auto auto auto auto;
+        #title {
+            z-index: 50 !important;
         }
 
-        .intro > * {
-            padding: 5px;
+        #title h1 {
+            transform-origin: 50% 100%;
         }
 
-        .intro img{
-            max-height: 250px;
-            transform: translateZ(.1px) scale(0.9) rotate(3deg);
-            border-radius: 5px;
-            background: rgba(240, 230, 220, .7);
-            box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+        #slide1 {
+            z-index: 0 !important;
         }
 
-        .resume_body {
-            position: relative;
-            padding: 20px 10%;
-            min-height: 100px;
+        .peekaboo {
+            z-index: -50;
+            position: sticky;
             width: 100%;
-            box-sizing: border-box;
-            transform-style: inherit;
+            bottom: 1px;
         }
 
+        #slide_end {
+            background: lightblue;
+        }
     </style>
     <meta name="theme-color" content="#fafafa">
 </head>
@@ -121,135 +200,215 @@
         </div>
     </header>
 
-
-    <div class="resume_body">
-        <div>
+    <div id="slide1" class="slide">
+        <div class="showOff">
+            <img src="assets/img/hyunsuk_bio.jpg">
+        </div>
+        <div class="title">
+            <h2>Hello!</h2>
             <p>
-                <a href="https://www.linkedin.com/in/hyerin-seok/">LinkedIn</a>
-                 | 
-                <a href="mailto:hyerinseok1@gmail.com">Email</a>
-                 | 
-                <a href="assets/Seok_Hyerin_CV.pdf">PDF version</a>
+                My name is Hyerin Seok, pronounced like the bird heron.
+                I'm a Design forward Software Developer in the San Francisco Bay Area.
+                I'm a creative coder, gamer, artist, cat mom and passionate about creative technology.
+
+                My experience lies in HCI concepts in UI/UX Prototyping, Spatial Computing, Mixed Reality, Game Dev, Web
+                I am a problem solver, bridging the gap between the artist and engineer.
+                <br><br>
+                Below are some of my projects!
             </p>
         </div>
-
-        <div class="intro">
-            <img src="assets/img/hyerin.jpg" />
-            <div>
-                <h1>Hyerin Seok</h1>
-                <h2>
-                    Software Engineer
-                </w>
-                    Bay Area, CA
-                </h2>
-                <p>
-                    HCI forward Software Developer with experience in UI/UX Design Prototyping, Spatial Computing, Mixed Reality, Game Dev, Web Dev.
-                </p>
-            </div>
+    </div>
+    
+    <div id="slide2" class="slide">
+        <div class="showOff">
+            <img src="assets/img/Logo+web.webp">
         </div>
-
-        <div>
-            <h2>
-                Technical Skills
-            </h2>
-            <ul>
-                <li>Unity3D(C#), Javascript/Typescript, Python(Godot), HTML, CSS, Restful APIs, MySQL, Unreal(C++)</li>
-                <li>OpenCV, Mobile Dev, Microcontroller(Arduino, Sparkfun, etc)</li>
-            </ul>
-            <h2>
-                Professional Experiences
-            </h2>
+        
+        <div class="title">
+            <h2>Museum of Science Fiction</h2>
+            <h3>2026 - present</h3>
+            <p>Currently participating in a volunteer project called Museum of Science Fiction, as a Senior Virtual Reality Developer, creating a interactions and navigation system in Unity.
+                <br>
+                <a href="https://www.museumofsciencefiction.org/vrmosf">Museum of Science Fiction</a>
+            </p>
             
-            <hr />
-            <div>
-                <h3>
-                    Prototyper | Meta | Burlingame, CA
-                </h3>
-                <p>
-                    Built prototypes to showcase potential use cases of Extended Reality(XR) technologies in partnership with product designers, engineers, and other prototypers. Responsibilities :
-        Developed and launched new features for Meta’s FoA(Family of Apps)
-                    <br><br>
-        Supported product designers and engineers through research, design, and prototyping, ensuring interdisciplinary flexibility
-        Rapidly iterated prototypes for Mixed Reality(MR) and mobile platforms in real-time 3D development environments, such as Unity 3D(C#), Spark(Javascript, Typescript), and internal tools
-        Created documentation to provide guidance and feedback to collaborators in other disciplines
-
-                </p>
-            </div>
-            <hr />
-            <div>
-                <h3>
-                    Research Engineer | CU Boulder ATLAS Institute | Boulder, CO
-                </h3>
-                <p>
-                    Collaborated with peers to creatively explore and implement novel human-computer interaction ideas. Accomplishments include:
-                    <br><br>
-        Participated in multiple projects that utilized Virtual Reality (VR) and Augmented Reality (AR) technology to innovate solutions for modern-day tasks via Unity
-Using Python and Arduino-based microcontrollers, created unique forms of person-to-person communication such as a device that informed a remote reader where you were reading in a book by using conductive paper
-Applied machine-learning techniques in Python to a collaborative project using supervised linear regression that visualizes clusters of movie trends based on current popular movie titles from TMDB API
-Worked as a teaching assistant for a Data Structures and Algorithms class. Taught Java to college students in a coding lab, while also attending to other teaching assistant duties
-
-                </p>
-            </div>
-
-            <hr />
-            <div>
-                <h3>
-                    Software Engineer | Connect4Education.com | Herndon, VA
-                </h3>
-                <p>
-                    Worked as a full-stack developer in a team-oriented environment. Maintained and developed online Learning Management System (LMS) software. Duties Include:
-                    <br><br>
-        Worked with instructional designers to build content, tools, and platforms for E-learning software, using database tools and Application Programming Interfaces (APIs) such as AWS, DreamFactory REST API, Canvas, Blackboard, etc.
-Participated in projects ranging from groups of 10+ collaborators to solo development projects
-Created web apps, web pages, and C# Unity applications for an array of platforms, such as the web, mobile devices, and Microsoft Hololens
-Solved Web Accessibility Issues in E-Learning using Javascript for NVDA users
-
-                </p>
-            </div>
-
-            
-            <hr />
-            <div>
-                <h3>
-                    Research Engineer | University of Texas at Dallas | Richardson, TX
-                </h3>
-                
-            </div>
-
-            <hr />
-            <div>
-                <h3>
-                    QA Engineering Intern | Microsoft, Inc | Seoul, Korea
-                </h3>
-                
-            </div>
-            <hr />
-            <div>
-                <h3>
-                    Web developer | Ukemania, Inc | Seoul, Korea
-                </h3>
-                
-            </div>
-
-            <hr />
-
-        </div>
-
-        <div>
-            <h2>Education</h2>
-            <div>
-                <h3>Master of Science in Computer Science, Interactive Computing Track</h3>
-                <p>University of Texas at Dallas</p>
-                <h3>Bachelor of Science in Multimedia Science, Computer & Information Science</h3>
-                <p>Sookmyung Women's University</p>
-            </div>
-        </div>
-
-        <div>
-            <h2>Other</h2>
-            <p>Artist, Baker, Cat mom.</p>
         </div>
     </div>
+
+    <div id="slide3" class="slide">
+        <div class="showOff">
+            <img src="assets/img/FishingGame.png">
+        </div>
+        
+        <div class="title">
+            <h2>Game Development project</h2>
+            <h3>2025 - present</h3>
+            <p>Fishing Pals is an idle incremental fishing game inspired by the classic Let’s Go Fishing toy. Players fish from a swirling whirlpool filled with colorful, animated fish that pop in and out of the water. The game combines nostalgia with modern idle mechanics and progression systems. Techstacks include Godot Engine with gdscript.</p>
+        </div>
+    </div>
+
+    <div id="slide4" class="slide">
+        <div class="showOff">
+            <img src="assets/img/RM_hdf5.png">
+        </div>
+        
+        <div class="title">
+            <h2>OpenCV project</h2>
+            <h3>2024</h3>
+            <p>Project consulting aiding a research project. OpenCV + Python to compute hdf5 files</p>
+        </div>
+    </div>
+
+    <div id="slide5" class="slide">
+        <div class="showOff">
+            <video src="assets/img/AR_Interaction_Spark.mp4" controls>Your browser does not support the video tag.</video>
+        </div>
+        
+        <div class="title">
+            <h2>AR project for application submission</h2>
+            <p>Take home AR interaction assignments for Meta Reality Lab using Spark Studio with Javascript.</p>
+        </div>
+    </div>
+    
+
+    <div id="slide6" class="slide">
+        <div class="showOff">
+            <video src="assets/img/AR_Interaction_Spark.mp4" controls>Your browser does not support the video tag.</video>
+        </div>
+        
+        <div class="title">
+            <h2>Viewer for retail Store Displays</h2>
+            <p>App for viewing 3D models of products for retail store ipad devices. Built in Spark AR.</p>
+        </div>
+    </div>
+    
+    <div id="slide7" class="slide">
+        <div class="showOff">
+            <img src="assets/img/ARRA.png">
+        </div>
+        
+        <div class="title">
+            <h2>ARRA</h2>
+            <h3>Augmented Reality Remote Assistant - 2020</h3>
+            <p>
+                This project investigates the combination of virtual and augmented reality to support communication between two distant parties, such as an expert technician guiding a less experienced repairman in the field. The accompanying video illustrates how the technology works.
+                <br>
+                <a href="https://www.colorado.edu/atlas/arra">CU Atlas - ARRA</a>
+            </p>
+        </div>
+    </div>
+    
+    <div id="slide8" class="slide">
+        <div class="showOff">
+            <img src="assets/img/kidGame.png">
+        </div>
+        
+        <div class="title">
+            <h2>Kids Climbing Trees</h2>
+            <h3>Group project for a game dev course</h3>
+            <p>
+                Built in Unity 2D, I worked on asset creation and animation.
+                <br>
+                <a href="https://rhysrueffert.itch.io/kids-climbing-trees">Itch.io page</a>
+            </p>
+        </div>
+    </div>
+    
+    <div id="slide9" class="slide">
+        <div class="showOff">
+            <video src="assets/img/ES_bookmark.mp4" controls>Your browser does not support the video tag.</video>
+        </div>
+        
+        <div class="title">
+            <h2>Exploring HCI without a screen</h2>
+            <h3>Bookmark</h3>
+            <p>
+                Inspired by Gianni Colombo’s concept of “elastic space”, we technologically stretched environments across distances and built multiple working interfaces that communicate across time and space.
+Concept for this tangible interface was a smart bookmark
+Used Arduino Circuit Playground integrated with conductive paper to create a raw working prototype
+Allowed users to digitally share their reading pace
+
+            </p>
+        </div>
+    </div>
+    
+    <div id="slide10" class="slide">
+        <div class="showOff">
+            <iframe src="https://drive.google.com/file/d/1SPL_9cZj-8uXi6RTA4y50jzBY-cLljL9/preview" width="640" height="480" ></iframe>
+        </div>
+        
+        <div class="title">
+            <h2>Engine Display</h2>
+            <p>
+                Augmented reality project involving interaction with a 3D engine model to educate DoD military mechanics
+ 
+Using Unity, Microsoft Hololens, and Mixed Reality Toolkit, enabled users to move, drag, rotate, zoom, and separate engine components using hand gestures and voice commands 
+            </p>
+        </div>
+    </div>
+    
+    <div id="slide11" class="slide">
+        <div class="showOff">
+            <img src="assets/img/mirage.png">
+        </div>
+        
+        <div class="title">
+            <h2>AR project</h2>
+            <h3>Drawing objects in AR environment</h3>
+            <p>
+Enabled users to draw in AR space, using a Lenovo Mirage AR headset coupled with a phone acting as a screen
+Qualisys motion capture system paired with Bluetooth controllers for user motion and Input
+
+            </p>
+        </div>
+    </div>
+    
+    
+    <div id="slide12" class="slide">
+        <div class="showOff">
+            <img src="assets/img/2016VR.jpg">
+        </div>
+        
+        <div class="title">
+            <h2>AR project</h2>
+            <h3>AR exercise transition</h3>
+            <p>
+                Assessing motion sickness in VR, AR and MR, and to gauge the effectiveness of an XR environment as a motivator for exercise 
+Using Samsung GearVR headset paired with a phone, user was to exercise on a stationary machine
+Environment transitions from AR to VR in an attempt to mitigate motion sickness
+OpenCV used with phone’s camera to track head movement via referencing known object
+            </p>
+        </div>
+    </div>
+    
+    <div id="slide12" class="slide">
+        <div class="showOff">
+            <img src="assets/img/snoop.png">
+        </div>
+        
+        <div class="title">
+            <h2>Snoop</h2>
+            <h3>Museum info app</h3>
+            <p>
+                Built a cross-device mobile app using cordova, that connects users phones to museum artifacts with bluetooth beacons.
+            </p>
+        </div>
+    </div>
+    
+    <div id="slide_end" class="slide header">
+        <h1>The End</h1>
+        <div class="peekaboo header">
+            Goodjob on scrolling all the way down 👍
+        </div>
+    </div>
+
+    <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>
