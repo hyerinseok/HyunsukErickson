@@ -176,8 +176,6 @@ p, li {
     display: grid;
     grid-template-columns: 70% auto;
     z-index: 5 !important;
-    position: fixed;
-    bottom: 0;
     align-content: center;  /* Vertical block-axis center */
 }
 
