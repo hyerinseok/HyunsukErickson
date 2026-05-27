@@ -298,14 +298,14 @@ img.socialmedia {
     position-anchor: --my-carousel;
 }
 .art ul::scroll-button(left) {
-    right: calc(anchor(left) - 70px);
+    left: calc(anchor(left));
     top: calc(anchor(top));
     height: 50vw;
 }
 
-.art ul::scroll-button(right) {
-    left: calc(anchor(right) - 70px);
-    top: calc(anchor(top) + 25vw);
+.art ul::scroll-button(right) {    
+    right: calc(anchor(right));
+    top: calc(anchor(top));
     height: 50vw;
 }
 .art ul::scroll-marker-group {
