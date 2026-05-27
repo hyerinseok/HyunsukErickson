@@ -214,7 +214,7 @@ img.socialmedia {
 }
 
 .art>h1,.art>p, .art>img{
-    width: 80%;
+    width: -webkit-fill-available;
     padding: 0 10%;
 }
 
