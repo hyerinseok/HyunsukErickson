@@ -98,107 +98,100 @@
         body>h1{
             padding: 0 10%;
         }
-ul {
-  width: 100vw;
-  display: flex;
-}
-li {
-  list-style-type: none;
-  background-color: #eeeeee;
-  flex: 1;
-}
 
-li:nth-child(even) {
-  background-color: cyan;
-}
-li>img{
-    height: 50vw;
-}
-ul {
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-}
-li {
-  scroll-snap-align: center;
-}
-ul::scroll-button(*) {
-  border: 0;
-  font-size: 2rem;
-  background: none;
-  color: black;
-  opacity: 0.7;
-  cursor: pointer;
-}
+        ul {
+            width: 100vw;
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;  
+            padding: 0;
+            anchor-name: --my-carousel;
+            scroll-marker-group: after;
 
-ul::scroll-button(*):hover,
-ul::scroll-button(*):focus {
-  opacity: 1;
-}
+        }
+        li {
+            list-style-type: none;
+            background-color: #eeeeee;
+            flex: 1;
+            scroll-snap-align: center;
+        }
 
-ul::scroll-button(*):active {
-  translate: 1px 1px;
-}
+        li:nth-child(even) {
+            background-color: cyan;
+        }
+        li>img{
+            height: 50vw;
+        }
+        ul::scroll-button(*) {
+            border: 0;
+            font-size: 2rem;
+            background: none;
+            color: black;
+            opacity: 0.7;
+            cursor: pointer;
+        }
 
-ul::scroll-button(*):disabled {
-  opacity: 0.2;
-  cursor: unset;
-}
-ul::scroll-button(left) {
-  content: "◄" / "Previous";
-}
+        ul::scroll-button(*):hover,
+        ul::scroll-button(*):focus {
+            opacity: 1;
+        }
 
-ul::scroll-button(right) {
-  content: "►" / "Next";
-}
-ul {
-  anchor-name: --my-carousel;
-}
+        ul::scroll-button(*):active {
+            translate: 1px 1px;
+        }
 
-ul::scroll-button(*) {
-  position: absolute;
-  position-anchor: --my-carousel;
-}
-ul::scroll-button(left) {
-  right: calc(anchor(left) - 70px);
-  top: calc(anchor(top) + 25vw);
-}
+        ul::scroll-button(*):disabled {
+            opacity: 0.2;
+            cursor: unset;
+        }
+        ul::scroll-button(left) {
+            content: "◄" / "Previous";
+        }
 
-ul::scroll-button(right) {
-  left: calc(anchor(right) - 70px);
-  top: calc(anchor(top) + 25vw);
-}
-ul {
-  scroll-marker-group: after;
-}
-ul::scroll-marker-group {
-  position: absolute;
-  position-anchor: --my-carousel;
-  top: calc(anchor(bottom) - 70px);
-  justify-self: anchor-center;
+        ul::scroll-button(right) {
+            content: "►" / "Next";
+        }
+        ul::scroll-button(*) {
+            position: absolute;
+            position-anchor: --my-carousel;
+        }
+        ul::scroll-button(left) {
+            right: calc(anchor(left) - 70px);
+            top: calc(anchor(top) + 25vw);
+        }
 
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
+        ul::scroll-button(right) {
+            left: calc(anchor(right) - 70px);
+            top: calc(anchor(top) + 25vw);
+        }
+        ul::scroll-marker-group {
+            position: absolute;
+            position-anchor: --my-carousel;
+            top: calc(anchor(bottom) - 70px);
+            justify-self: anchor-center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-.horizontal-scroll {
-  width: 100vw;          /* Restricts the box width */
-  overflow-x: auto;     /* Adds horizontal scrollbar when items overflow */
-  overflow-y: none;
-  white-space: nowrap;  /* Prevents child elements from breaking to the next line */
-  height: 50vw;
-}
+        .horizontal-scroll {
+            width: 100vw;          /* Restricts the box width */
+            overflow-x: auto;     /* Adds horizontal scrollbar when items overflow */
+            overflow-y: hidden;
+            white-space: nowrap;  /* Prevents child elements from breaking to the next line */
+            height: 50vw;
+        }
 
-.item {
-  display: inline-block; /* Forces items to stay side-by-side */
-  width: auto;
-  height: 50vw;
-  background-color: #f0f0f0;
-}
+        .item {
+            display: inline-block; /* Forces items to stay side-by-side */
+            width: auto;
+            height: 50vw;
+            background-color: #f0f0f0;
+        }
 
-.item>img {
-  height: 50vw;
-}
+        .item>img {
+            height: 50vw;
+        }
 
     </style>
     <meta name="theme-color" content="#fafafa">
