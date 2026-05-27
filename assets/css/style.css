@@ -61,7 +61,7 @@ body>h1{
     padding: 0 10%;
 }
 
-p {
+p, li {
     font-size: 140%;
     line-height: 150%;
     color: #333;
@@ -183,6 +183,32 @@ img.socialmedia {
     float: right;
 }
 
+.intro {
+    position: relative;
+    display: grid;
+    margin: 0;
+}
+
+.intro>* {
+    padding: 5px;
+}
+
+.intro img {
+    max-height: 500px;
+    transform: translateZ(.1px);
+    border-radius: 5px;
+    background: rgba(240, 230, 220, .7);
+    box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.resume_body {
+    position: relative;
+    padding: 20px 10%;
+    min-height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    transform-style: inherit;
+}
 
 .art ul {
     width: 100vw;
@@ -319,5 +345,8 @@ img.socialmedia {
         float: none;
     }
 
-    
+    .intro img {
+        max-width: 100%;
+    }
+
 }
