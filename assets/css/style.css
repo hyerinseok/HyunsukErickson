@@ -97,11 +97,15 @@ p, li {
 .slide:nth-child(2n+1) .title {
     margin-left: 0;
     margin-right: auto;
+    position: relative;
+    z-index: -10 !important;
 }
 
 .slide:nth-child(2n) .title {
     margin-left: auto;
     margin-right: 0;
+    position: relative;
+    z-index: -10 !important;
 }
 
 #main_image {
@@ -118,8 +122,12 @@ p, li {
 
 .showOff {
     width: 100%;
-    max-width: 40%;
-    height: stretch;
+    max-width: 40vw;
+}
+
+.video{
+    height: 22.5vw;
+    aspect-ratio: 16 / 9;
 }
 
 .showOff > *{
@@ -130,12 +138,17 @@ p, li {
     box-shadow: 0 0 8px rgba(0, 0, 0, .7);
 }
 
+.showOff > iframe {
+    height: -webkit-fill-available;
+}
+
 .slide:nth-child(2n+1) .showOff{
     position: absolute;
     top: -5%;
     right: 10%;
     margin-left: 0;
     margin-right: auto;
+    z-index: 10 !important;
 }
 
 .slide:nth-child(2n) .showOff{
@@ -144,6 +157,7 @@ p, li {
     left: 10%;
     margin-left: auto;
     margin-right: 0;
+    z-index: 10 !important;
 }
 
 .slide,
