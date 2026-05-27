@@ -213,7 +213,7 @@ img.socialmedia {
     transform-style: inherit;
 }
 
-.art>h1, p{
+.art>h1,.art>p{
     padding: 0 10%;
 }
 
@@ -327,6 +327,9 @@ img.socialmedia {
     
     .header-right {
         float: none;
+    }
+
+    .sub-header {
         display: none;
     }
 
