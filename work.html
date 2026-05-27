@@ -99,19 +99,16 @@
             padding: 0 10%;
         }
 ul {
-  width: 100vw;
+  width: 70%;
   height: stretch;
   display: flex;
-  gap: 4vw;
 }
 ul>*{
-    height: fit-content;
+    width: 100%;
 }
 li {
   list-style-type: none;
   background-color: #eeeeee;
-  padding: 20px;
-
   flex: 1;
 }
 
@@ -119,7 +116,7 @@ li:nth-child(even) {
   background-color: cyan;
 }
 li>*{
-       width: 100vw;
+    width: 50vw;
 }
 ul {
   overflow-x: scroll;
@@ -187,32 +184,18 @@ ul::scroll-marker-group {
   justify-content: center;
   gap: 20px;
 }
-li::scroll-marker {
-  content: attr(data-accName);
-  width: 16px;
-  height: 16px;
-  background-color: transparent;
-  border: 2px solid black;
-  border-radius: 50%;
-  overflow: hidden;
-  text-indent: 16px;
-}
-li::scroll-marker:target-current {
-  background-color: black;
-}
 
 .horizontal-scroll {
-  width: 100%;          /* Restricts the box width */
+  width: 100vw;          /* Restricts the box width */
   overflow-x: auto;     /* Adds horizontal scrollbar when items overflow */
   white-space: nowrap;  /* Prevents child elements from breaking to the next line */
-  border: 1px solid #ccc;
-  padding: 15px;
+  height: 50vw;
 }
 
 .item {
   display: inline-block; /* Forces items to stay side-by-side */
-  width: auto;
-  height: 100vw;
+  width: 100%;
+  height: 100%;
   background-color: #f0f0f0;
   margin-right: 10px;
 }
