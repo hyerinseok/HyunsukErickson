@@ -107,15 +107,17 @@
 
 ul {
   width: 100vw;
-  height: 300px;
+  height: stretch;
   padding: 20px;
   display: flex;
   gap: 4vw;
 }
+ul>*{
+    height: fit-content;
+}
 li {
   list-style-type: none;
   background-color: #eeeeee;
-  border: 1px solid #dddddd;
   padding: 20px;
 
   flex: 0 0 100%;
@@ -170,12 +172,12 @@ ul::scroll-button(*) {
 }
 ul::scroll-button(left) {
   right: calc(anchor(left) - 70px);
-  bottom: calc(anchor(top) + 13px);
+  top: calc(anchor(top) + 150px);
 }
 
 ul::scroll-button(right) {
   left: calc(anchor(right) - 70px);
-  bottom: calc(anchor(top) + 13px);
+  top: calc(anchor(top) + 150px);
 }
 ul {
   scroll-marker-group: after;
