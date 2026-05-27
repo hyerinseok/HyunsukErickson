@@ -263,6 +263,7 @@ img.socialmedia {
 }
 .art li img{
     height: 50vw;
+    padding: 1px;
 }
 .art ul::scroll-button(*) {
     border: 0;
