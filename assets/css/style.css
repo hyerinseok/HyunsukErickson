@@ -328,11 +328,6 @@ img.socialmedia {
     .header-right {
         float: none;
     }
-
-    .sub-header {
-        display: none;
-    }
-
     #main_image:before {
         background-image: url(../img/home_image.webp);
         transform: translateZ(-0.5px) scale(2);
@@ -375,4 +370,10 @@ img.socialmedia {
         margin: auto;
     }
 
+}
+
+@media screen and (max-width: 500px) {
+    .sub-header {
+        display: block;
+    }
 }
