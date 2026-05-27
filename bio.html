@@ -70,18 +70,6 @@
             color: #003399;
         }
 
-        @media screen and (max-width: 500px) {
-            header a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-            
-            .header-right {
-                float: none;
-            }
-        }
-
         .intro {
             position: relative;
             display: grid;
@@ -107,6 +95,23 @@
             width: 100%;
             box-sizing: border-box;
             transform-style: inherit;
+        }
+
+        @media screen and (max-width: 500px) {
+            header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            
+            .header-right {
+                float: none;
+            }
+
+            .intro img{
+                max-width: 100%;
+            }
+
         }
 
     </style>
