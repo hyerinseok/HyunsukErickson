@@ -259,7 +259,7 @@ img.socialmedia {
 }
 
 .art li:nth-child(even) {
-    background-color: cyan;
+    background-color: #eeeeee;
 }
 .art li img{
     height: 50vw;
@@ -267,7 +267,6 @@ img.socialmedia {
 .art ul::scroll-button(*) {
     border: 0;
     font-size: 2rem;
-    background: none;
     color: black;
     opacity: 0.7;
     cursor: pointer;
