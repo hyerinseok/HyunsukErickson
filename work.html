@@ -201,6 +201,22 @@ li::scroll-marker:target-current {
   background-color: black;
 }
 
+.horizontal-scroll {
+  width: 100%;          /* Restricts the box width */
+  overflow-x: auto;     /* Adds horizontal scrollbar when items overflow */
+  white-space: nowrap;  /* Prevents child elements from breaking to the next line */
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+.item {
+  display: inline-block; /* Forces items to stay side-by-side */
+  width: 150px;
+  height: 100px;
+  background-color: #f0f0f0;
+  margin-right: 10px;
+}
+
     </style>
     <meta name="theme-color" content="#fafafa">
 </head>
@@ -217,20 +233,22 @@ li::scroll-marker:target-current {
     </header>
     
     <h1>Ginhwa (Evolve)</h1>
-    <ul>
-        <li data-accName="Item 1">
-            <h2>Page 1</h2>
+
+    <div class="horizontal-scroll">
+        <div class="item">
             <img src="assets/img/ginhwa1.webp" />
-        </li>
-        <li data-accName="Item 2">
-            <h2>Page 2</h2>
+        </div>
+        
+        <div class="item">
             <img src="assets/img/ginhwa2.webp" />
-        </li>
-        <li data-accName="Item 3">
-            <h2>Page 3</h2>
+        </div>
+
+        <div class="item">
             <img src="assets/img/ginhwa3.webp" />
-        </li>
-    </ul>
+        </div>
+        
+    </div>
+
 
     <h1>Thingumabob “Shilhumshil” (LAB)</h1>
     <ul>
