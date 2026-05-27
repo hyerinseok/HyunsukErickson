@@ -132,7 +132,7 @@ p, li {
 
 .slide:nth-child(2n+1) .showOff{
     position: absolute;
-    top: 5%;
+    top: 0%;
     right: 10%;
     margin-left: 0;
     margin-right: auto;
@@ -140,7 +140,7 @@ p, li {
 
 .slide:nth-child(2n) .showOff{
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 10%;
     margin-left: auto;
     margin-right: 0;
