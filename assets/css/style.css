@@ -299,12 +299,14 @@ img.socialmedia {
 }
 .art ul::scroll-button(left) {
     right: calc(anchor(left) - 70px);
-    top: calc(anchor(top) + 25vw);
+    top: calc(anchor(top));
+    height: 50vw;
 }
 
 .art ul::scroll-button(right) {
     left: calc(anchor(right) - 70px);
     top: calc(anchor(top) + 25vw);
+    height: 50vw;
 }
 .art ul::scroll-marker-group {
     position: absolute;
