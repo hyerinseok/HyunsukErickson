@@ -117,13 +117,13 @@ p, li {
 }
 
 .showOff {
+    width: 100%;
     max-width: 40%;
     height: stretch;
 }
 
 .showOff > *{
-    max-width: stretch;
-    max-height: stretch;
+    width: -webkit-fill-available;
     transform: translateZ(.1px) scale(0.9) rotate(3deg);
     border-radius: 5px;
     background: rgba(240, 230, 220, .7);
@@ -350,8 +350,8 @@ img.socialmedia {
         width : 100%;
     }
 
-    .slide:nth-child(n) .showOff{
-        width: 100%;
+    .slide .showOff{
+        max-width: 100%;
         position: relative;
         top: auto;
         left: auto;
@@ -359,9 +359,7 @@ img.socialmedia {
         margin-left: auto;
         margin-right: auto;
     }
-    .showOff>*{
-        width: -webkit-fill-available
-    }
+
     img.socialmedia {
         margin: 2px;
         float: none;
