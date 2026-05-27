@@ -350,7 +350,7 @@ img.socialmedia {
         width : 100%;
     }
 
-    .slide .showOff{
+    .slide:nth-child(n) .showOff{
         max-width: 100%;
         position: relative;
         top: auto;
