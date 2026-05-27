@@ -63,10 +63,6 @@ h1 {
     font-size: 250%;
 }
 
-body>h1{
-    padding: 0 10%;
-}
-
 p, li {
     font-size: 140%;
     line-height: 150%;
@@ -116,7 +112,7 @@ p, li {
 
 #main_image:before {
     background-image: url(../img/home_image.webp);
-    transform: translateZ(-0.7px) scale(2);
+    transform: translateZ(-0.5px) scale(2);
     height: -webkit-fill-available;
 }
 
@@ -215,6 +211,10 @@ img.socialmedia {
     width: 100%;
     box-sizing: border-box;
     transform-style: inherit;
+}
+
+.art h1,p{
+    padding: 0 10%;
 }
 
 .art ul {
@@ -331,7 +331,7 @@ img.socialmedia {
 
     #main_image:before {
         background-image: url(../img/home_image.webp);
-        transform: translateZ(-0.6px) scale(2);
+        transform: translateZ(-0.5px) scale(2);
         height: -webkit-fill-available;
     }
 
