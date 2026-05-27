@@ -160,12 +160,12 @@ ul::scroll-button(*) {
 }
 ul::scroll-button(left) {
   right: calc(anchor(left) - 70px);
-  top: calc(anchor(top) + 150px);
+  top: calc(anchor(top) + 25vw);
 }
 
 ul::scroll-button(right) {
   left: calc(anchor(right) - 70px);
-  top: calc(anchor(top) + 150px);
+  top: calc(anchor(top) + 25vw);
 }
 ul {
   scroll-marker-group: after;
@@ -184,6 +184,7 @@ ul::scroll-marker-group {
 .horizontal-scroll {
   width: 100vw;          /* Restricts the box width */
   overflow-x: auto;     /* Adds horizontal scrollbar when items overflow */
+  overflow-y: none;
   white-space: nowrap;  /* Prevents child elements from breaking to the next line */
   height: 50vw;
 }
