@@ -11,56 +11,9 @@
     <link rel="apple-touch-icon" href="icon.png">
 
     <style>
-        @font-face {
-            font-family: GeoSans; /* set name */
-            src: url(assets/fonts/geo-sans-light/GeosansLight.ttf); /* url of the font */
-        }
-
-        * {box-sizing: border-box;}
-
-        html {
-            height: 100%;
-            overflow: hidden;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            perspective: 1px;
-            transform-style: preserve-3d;
-            height: 100%;
-            overflow-y: scroll;
-            overflow-x: hidden;
-            font-family: 'GeoSans';
-            color: #003399;
-        }
-
-        h1 {
-            font-size: 250%;
-        }
-
-        p {
-            font-size: 140%;
-            line-height: 150%;
-            color: #333;
-        }
-
-        .slide {
-            position: relative;
-            padding: 20px 10%;
-            min-height: 100px;
-            width: 100%;
-            box-sizing: border-box;
-            transform-style: inherit;
-        }
-
+        
         .slide:before {
-            content: "";
-            position: absolute;
             top: 125px;
-            bottom: 0;
-            left: 0;
-            right: 0;
         }
 
         .title {

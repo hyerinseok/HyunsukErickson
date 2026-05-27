@@ -9,191 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
         <link rel="apple-touch-icon" href="icon.png">
-        <link rel="stylesheet" href="styles.css">
-        <style>
-            @font-face {
-                font-family: GeoSans; /* set name */
-                src: url(assets/fonts/geo-sans-light/GeosansLight.ttf); /* url of the font */
-            }
-
-            * {box-sizing: border-box;}
-
-            html {
-                height: 100%;
-                overflow: hidden;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                perspective: 1px;
-                transform-style: preserve-3d;
-                height: 100%;
-                overflow-y: scroll;
-                overflow-x: hidden;
-                font-family: 'GeoSans';
-                color: #003399;
-            }
-
-            h1 {
-                font-size: 250%;
-            }
-
-            p {
-                font-size: 140%;
-                line-height: 150%;
-                color: #333;
-            }
-            header {
-                overflow: hidden;
-                padding: 50px;
-            }
-
-            header a {
-                float: left;
-                text-align: center;
-                padding: 12px;
-                font-size: 18px; 
-                line-height: 25px;
-                border-radius: 4px;
-                color: #003399;
-            }
-
-            .header-right {
-                float: right;
-            }
-
-            a {
-                text-decoration: none;
-                position: relative;
-                z-index: auto;
-            }
-            
-            @media screen and (max-width: 500px) {
-                header a {
-                    float: none;
-                    display: block;
-                    text-align: left;
-                }
-                
-                .header-right {
-                    float: none;
-                }
-
-                .slide .title {
-                    width : 100%;
-                }
-
-                .slide:nth-child(n) .showOff{
-                    max-width: 100%;
-                    position: relative;
-                    top: auto;
-                    left: auto;
-                    right: auto;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-            }
-
-            body>h1{
-                padding: 0 10%;
-            }
-
-            ul {
-                width: 100vw;
-                display: flex;
-                overflow-x: scroll;
-                scroll-snap-type: x mandatory;  
-                padding: 0;
-                anchor-name: --my-carousel;
-                scroll-marker-group: after;
-
-            }
-            li {
-                list-style-type: none;
-                background-color: #eeeeee;
-                flex: 1;
-                scroll-snap-align: center;
-            }
-
-            li:nth-child(even) {
-                background-color: cyan;
-            }
-            li>img{
-                height: 50vw;
-            }
-            ul::scroll-button(*) {
-                border: 0;
-                font-size: 2rem;
-                background: none;
-                color: black;
-                opacity: 0.7;
-                cursor: pointer;
-            }
-
-            ul::scroll-button(*):hover,
-            ul::scroll-button(*):focus {
-                opacity: 1;
-            }
-
-            ul::scroll-button(*):active {
-                translate: 1px 1px;
-            }
-
-            ul::scroll-button(*):disabled {
-                opacity: 0.2;
-                cursor: unset;
-            }
-            ul::scroll-button(left) {
-                content: "◄" / "Previous";
-            }
-
-            ul::scroll-button(right) {
-                content: "►" / "Next";
-            }
-            ul::scroll-button(*) {
-                position: absolute;
-                position-anchor: --my-carousel;
-            }
-            ul::scroll-button(left) {
-                right: calc(anchor(left) - 70px);
-                top: calc(anchor(top) + 25vw);
-            }
-
-            ul::scroll-button(right) {
-                left: calc(anchor(right) - 70px);
-                top: calc(anchor(top) + 25vw);
-            }
-            ul::scroll-marker-group {
-                position: absolute;
-                position-anchor: --my-carousel;
-                top: calc(anchor(bottom) - 70px);
-                justify-self: anchor-center;
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-            }
-
-            .horizontal-scroll {
-                width: 100vw;          /* Restricts the box width */
-                overflow-x: auto;     /* Adds horizontal scrollbar when items overflow */
-                overflow-y: hidden;
-                white-space: nowrap;  /* Prevents child elements from breaking to the next line */
-                height: 50vw;
-            }
-
-            .item {
-                display: inline-block; /* Forces items to stay side-by-side */
-                width: auto;
-                height: 50vw;
-                background-color: #f0f0f0;
-            }
-
-            .item>img {
-                height: 50vw;
-            }
-
-        </style>
+        
         <meta name="theme-color" content="#fafafa">
     </head>
 
@@ -235,29 +51,29 @@ Through solo weaving, knotting, and crochet work, I navigate the tensions betwee
             
         </div>
 
-
-        <h1>Thingumabob “Shilhumshil” (LAB)</h1>
-        <p>The dynamic tension between all thingumabobs
-            <br />
-276” X 216” X 111.6”H / 2024 / Masking tape, clay, Yarn, Poly-fill, found fabric, plastic bag, cardboard, zip-tie, lamp cover, watercolor
-            <br />
-The "thingumabob" embodies my experience of cultural hybridity, capturing the dynamic tension between Korean and American influences that continuously shape my life. Inspired by the landscapes I encountered, especially the Canadian Rocky Mountains during my BANFF Artist Residency, this work invites viewers to consider the impact of environment on identity. The piece’s inner structure—muscle layers and cells—mirrors the Thingumabob community’s surroundings, symbolizing a shift in viewpoint to explore global issues from a fresh perspective. 
-Over time, the “thingumabob” has grown and evolved, expanding from individual forms to multiple families and now into a collective society. This progression represents the complex, interconnected nature of cultural identity and the shared experiences that unite us. Through this piece, I hope to engage others in contemplating how cultural synthesis and resistance shape our understanding of the world.</p>
-        <ul>
-            <li data-accName="Item 1">
-                <img src="assets/img/Shilhumshil1.webp" />
-            </li>
-            <li data-accName="Item 2">
-                <img src="assets/img/Shilhumshil2.webp" />
-            </li>
-            <li data-accName="Item 3">
-                <img src="assets/img/Shilhumshil3.webp" />
-            </li>
-            <li data-accName="Item 4">
-                <video src="https://youtu.be/lOS7dt6V3_8"></video>
-            </li>
-        </ul>
-            
+        <div class="art">
+            <h1>Thingumabob “Shilhumshil” (LAB)</h1>
+            <p>The dynamic tension between all thingumabobs
+                <br />
+    276” X 216” X 111.6”H / 2024 / Masking tape, clay, Yarn, Poly-fill, found fabric, plastic bag, cardboard, zip-tie, lamp cover, watercolor
+                <br />
+    The "thingumabob" embodies my experience of cultural hybridity, capturing the dynamic tension between Korean and American influences that continuously shape my life. Inspired by the landscapes I encountered, especially the Canadian Rocky Mountains during my BANFF Artist Residency, this work invites viewers to consider the impact of environment on identity. The piece’s inner structure—muscle layers and cells—mirrors the Thingumabob community’s surroundings, symbolizing a shift in viewpoint to explore global issues from a fresh perspective. 
+    Over time, the “thingumabob” has grown and evolved, expanding from individual forms to multiple families and now into a collective society. This progression represents the complex, interconnected nature of cultural identity and the shared experiences that unite us. Through this piece, I hope to engage others in contemplating how cultural synthesis and resistance shape our understanding of the world.</p>
+            <ul>
+                <li data-accName="Item 1">
+                    <img src="assets/img/Shilhumshil1.webp" />
+                </li>
+                <li data-accName="Item 2">
+                    <img src="assets/img/Shilhumshil2.webp" />
+                </li>
+                <li data-accName="Item 3">
+                    <img src="assets/img/Shilhumshil3.webp" />
+                </li>
+                <li data-accName="Item 4">
+                    <video src="https://youtu.be/lOS7dt6V3_8"></video>
+                </li>
+            </ul>
+        </div>
         <div id="slide_end" class="slide header">
             <div class="footer">
                 <h3>Hyunsuk Erickson</h3>
