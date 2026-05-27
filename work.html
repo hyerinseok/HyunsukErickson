@@ -95,16 +95,9 @@
             }
         }
 
-        #title {
-            z-index: 50 !important;
+        body>h1{
+            padding: 0 10%;
         }
-
-        #title h1 {
-            transform-origin: 50% 100%;
-        }
-
-
-
 ul {
   width: 100vw;
   height: stretch;
@@ -120,11 +113,14 @@ li {
   background-color: #eeeeee;
   padding: 20px;
 
-  flex: 0 0 100%;
+  flex: 1;
 }
 
 li:nth-child(even) {
   background-color: cyan;
+}
+li>*{
+        width: -webkit-fill-available;
 }
 ul {
   overflow-x: scroll;
