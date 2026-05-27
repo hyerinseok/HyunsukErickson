@@ -327,6 +327,7 @@ img.socialmedia {
     
     .header-right {
         float: none;
+        display: none;
     }
 
     #main_image:before {
