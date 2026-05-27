@@ -32,6 +32,14 @@ header a {
     color: #003399;
 }
 
+.header-right a:hover {
+    background-color: lightblue;
+}
+
+.header-drop a:hover {
+    background-color: #ddd;
+}
+
 a {
     text-decoration: none;
     position: relative;
