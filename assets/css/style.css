@@ -129,6 +129,12 @@ p, li {
     height: -webkit-fill-available;
 }
 
+#main_blurb {
+    width : 40vw;
+    height : 20vh;
+    background: rgba(240, 230, 220, .7);
+}
+
 .showOff {
     width: 100%;
     max-width: 40vw;
