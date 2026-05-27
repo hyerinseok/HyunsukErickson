@@ -368,6 +368,7 @@ img.socialmedia {
 
     .intro img {
         max-width: 100%;
+        margin: auto;
     }
 
 }
