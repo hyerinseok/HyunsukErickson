@@ -425,7 +425,7 @@ img.socialmedia {
     }
 
     .video{
-        height: stretch;
+        height: -webkit-fill-available;
         aspect-ratio: 16 / 9;
     }
 
