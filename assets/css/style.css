@@ -134,7 +134,13 @@ p, li {
     width : 40vw;
     height : 20vh;
     background: rgba(240, 230, 220, .7);
-    bottom : 0px;
+    right: 0px;
+    bottom : 30vh;
+    padding : 10px;
+    font-weight: bold;
+    padding: 10px;
+    align-content: center;
+    text-align: right;
 }
 
 .showOff {
@@ -366,6 +372,10 @@ img.socialmedia {
         background-image: url(../img/home_image.webp);
         transform: translateZ(-0.5px) scale(2);
         height: -webkit-fill-available;
+    }
+
+    #main_blurb {
+        width: 100vw;
     }
 
     #slide_end {
