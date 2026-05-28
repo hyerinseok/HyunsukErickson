@@ -160,7 +160,6 @@ p, li {
     width : 32.5vw;
     height : 12.5vh;
     background: rgba(0, 0, 0, .5);
-    color: rgba(255, 255, 255, 0.8);
     right: 0px;
     bottom : 30vh;
     padding : 20px;
@@ -172,6 +171,7 @@ p, li {
 #main_blurb p {
     margin: auto;
     font-size: 200%;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .showOff:has(img) {
