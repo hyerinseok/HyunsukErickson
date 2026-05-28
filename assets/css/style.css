@@ -173,7 +173,7 @@ p, li {
     font-size: 200%;
 }
 
-.showOff.has(img) {
+.showOff:has(img) {
     width: 100%;
     max-width: 37.5vw;
     height: 90%;
