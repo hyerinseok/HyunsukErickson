@@ -108,18 +108,22 @@ p, li {
     background: rgba(240, 230, 220, .7);
 }
 
+.title a {
+    color: #6757b1;
+}
+
 .slide:nth-child(2n+1) .title {
     margin-left: 0;
     margin-right: auto;
     position: relative;
-    z-index: -10 !important;
+    z-index: 10 !important;
 }
 
 .slide:nth-child(2n) .title {
     margin-left: auto;
     margin-right: 0;
     position: relative;
-    z-index: -10 !important;
+    z-index: 10 !important;
 }
 
 #main_image {
