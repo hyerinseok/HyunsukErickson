@@ -297,7 +297,7 @@ img.socialmedia {
 }
 .art li img{
     height: 50vw;
-    padding: 1px;
+    padding: 5px;
 }
 .art ul::scroll-button(*) {
     border: 0;
@@ -335,12 +335,14 @@ img.socialmedia {
     left: calc(anchor(left));
     top: calc(anchor(top));
     height: 50vw;
+    width: 8vw;
 }
 
 .art ul::scroll-button(right) {    
     right: calc(anchor(right));
     top: calc(anchor(top));
     height: 50vw;
+    width: 8vw;
 }
 .art ul::scroll-marker-group {
     position: absolute;
