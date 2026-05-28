@@ -142,7 +142,7 @@ p, li {
 
 #main_image:before {
     animation: slideShow 15s infinite;
-    transition: 1s ease-in-out infinite; /* Smooths out asset changes */
+    transition: 3s ease-in-out infinite; /* Smooths out asset changes */
     transform: translateZ(-0.5px) scale(2);
     height: -webkit-fill-available;
     
@@ -198,15 +198,6 @@ p, li {
     left: 10%;
     margin-left: auto;
     margin-right: 0;
-}
-
-.slide,
-.slide:before {
-    background: 50% 50% / cover;
-}
-
-.slide:before {
-    top: 125px;
 }
 
 #slide1 {
