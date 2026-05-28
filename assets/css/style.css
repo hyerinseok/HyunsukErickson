@@ -200,6 +200,11 @@ p, li {
     margin-right: 0;
 }
 
+.slide,
+.slide:before {
+    background: 50% 50% / cover;
+}
+
 #slide1 {
     z-index: 0 !important;
 }
