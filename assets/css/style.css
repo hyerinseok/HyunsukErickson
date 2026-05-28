@@ -377,6 +377,7 @@ img.socialmedia {
 
     #main_blurb {
         width: 100vw;
+        bottom: 50vh;
     }
 
     #slide_end {
