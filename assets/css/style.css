@@ -130,9 +130,11 @@ p, li {
 }
 
 #main_blurb {
+    position: absolute;
     width : 40vw;
     height : 20vh;
     background: rgba(240, 230, 220, .7);
+    bottom : 0px;
 }
 
 .showOff {
