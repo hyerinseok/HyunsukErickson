@@ -127,10 +127,24 @@ p, li {
     z-index: 0 !important;
 }
 
-#main_image:before {
+@keyframes slideShow {
+  0%, 33.33% {
     background-image: url(../img/home_image.webp);
+  }
+  33.34%, 66.66% {
+    background-image: url(../img/ginhwa1.webp);
+  }
+  66.67%, 100% {
+    background-image: url(../img/Shilhumshil1.webp);
+  }
+}
+
+#main_image:before {
+    animation: slideShow 15s infinite;
+    transition: background-image 0.5s ease-in-out; /* Smooths out asset changes */
     transform: translateZ(-0.5px) scale(2);
     height: -webkit-fill-available;
+    
 }
 
 #main_blurb {
