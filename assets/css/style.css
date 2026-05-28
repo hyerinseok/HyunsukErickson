@@ -424,6 +424,11 @@ img.socialmedia {
         margin-right: auto;
     }
 
+    .video{
+        height: stretch;
+        aspect-ratio: 16 / 9;
+    }
+
     img.socialmedia {
         margin: 2px;
         float: none;
