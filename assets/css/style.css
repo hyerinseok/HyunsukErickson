@@ -174,9 +174,9 @@ p, li {
 }
 
 .showOff:has(img) {
-    width: 100%;
+    width: 90%;
     max-width: 37.5vw;
-    height: 90%;
+    max-height: 90%;
     display: flex;
 }
 
