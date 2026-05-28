@@ -141,7 +141,7 @@ p, li {
 
 #main_image:before {
     animation: slideShow 15s infinite;
-    transition: background-image 1s ease-in-out infinite; /* Smooths out asset changes */
+    transition: 1s ease-in-out infinite; /* Smooths out asset changes */
     transform: translateZ(-0.5px) scale(2);
     height: -webkit-fill-available;
     
