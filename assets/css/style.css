@@ -55,6 +55,10 @@ a {
     font-size: 200%; 
 }
 
+.header-drop{
+    font-weight: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
