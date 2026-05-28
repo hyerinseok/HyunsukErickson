@@ -163,7 +163,6 @@ p, li {
     right: 0px;
     bottom : 30vh;
     padding : 20px;
-    font-weight: bold;
     align-content: center;
     text-align: right;
 }
@@ -171,7 +170,7 @@ p, li {
 #main_blurb p {
     margin: auto;
     font-size: 200%;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 1);
 }
 
 .showOff:has(img) {
