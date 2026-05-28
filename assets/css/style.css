@@ -138,11 +138,12 @@ p, li {
     bottom : 30vh;
     padding : 10px;
     font-weight: bold;
-    padding: 20px;
     align-content: center;
     text-align: right;
 }
-
+#main_blurb p {
+    margin: auto;
+}
 .showOff {
     width: 100%;
     max-width: 40vw;
