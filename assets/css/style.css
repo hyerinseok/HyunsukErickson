@@ -378,6 +378,7 @@ img.socialmedia {
     #main_blurb {
         width: 100vw;
         bottom: 50vh;
+        -webkit-transform: translateZ(0);
     }
 
     #slide_end {
