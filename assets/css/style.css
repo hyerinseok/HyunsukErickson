@@ -147,7 +147,7 @@ p, li {
 
 .showOff > *{
     width: -webkit-fill-available;
-    transform: translateZ(.1px) scale(0.9) rotate(3deg);
+    transform: translateZ(.1px) scale(0.9) rotate(0deg);
     border-radius: 5px;
     background: rgba(240, 230, 220, .7);
     box-shadow: 0 0 8px rgba(0, 0, 0, .7);
@@ -159,7 +159,7 @@ p, li {
 
 .slide:nth-child(2n+1) .showOff{
     position: absolute;
-    top: -5%;
+    top: 1%;
     right: 10%;
     margin-left: 0;
     margin-right: auto;
@@ -168,7 +168,7 @@ p, li {
 
 .slide:nth-child(2n) .showOff{
     position: absolute;
-    top: 0%;
+    top: 1%;
     left: 10%;
     margin-left: auto;
     margin-right: 0;
