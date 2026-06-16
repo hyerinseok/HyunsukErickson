@@ -2,7 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs')
 
-const url = 'https://www.hyunsukerickson.art/drawings'
+const url = 'https://www.hyunsukerickson.art'
 let linkList = []
 let dlinkList = []
 
@@ -33,7 +33,7 @@ const downloadLinks = async (linkList) => {
   
     //console.log("C:\\Users\\perso\\Downloads\\GoalKicker-Books-Script-master\\GoalKicker-Books-Script-master\\imgs\\" + count + ".jpeg")
     
-    const writer = fs.createWriteStream("C:\\Users\\perso\\Downloads\\GoalKicker-Books-Script-master\\GoalKicker-Books-Script-master\\drawings\\" + count + ".jpeg");
+    const writer = fs.createWriteStream("C:\\Users\\perso\\Desktop\\Website\\HyunsukErickson\\HyunsukErickson\\assets\\img\\work\\" + count + ".jpeg");
       response.data.pipe(writer);
 
     count++;
