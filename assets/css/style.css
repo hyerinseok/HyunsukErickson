@@ -288,7 +288,6 @@ img.socialmedia {
 .art li {
     list-style-type: none;
     background-color: #eeeeee;
-    flex: 1;
     scroll-snap-align: center;
 }
 .art li:nth-child(even) {
