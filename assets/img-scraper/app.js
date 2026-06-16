@@ -2,7 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs')
 
-const url = 'https://www.hyunsukerickson.art'
+const url = 'https://www.hyunsukerickson.art/sculptures'
 let linkList = []
 let dlinkList = []
 
@@ -11,9 +11,9 @@ const getWebsiteLinks = async (url) => {
   try {
     const response = await axios.get(url)
     const $ = cheerio.load(response.data)
-    $('div.js-content-mode-element').each(function (i, elem) {  
-      let link = $(elem).find('img').attr('data-src')
-      linkList.push(link)
+    $('img').each(function (i, elem) {  
+      let link = $(elem).attr('data-src')
+      if(link) linkList.push(link)
     });
   } catch (error) {
     console.error(error)
@@ -33,7 +33,7 @@ const downloadLinks = async (linkList) => {
   
     //console.log("C:\\Users\\perso\\Downloads\\GoalKicker-Books-Script-master\\GoalKicker-Books-Script-master\\imgs\\" + count + ".jpeg")
     
-    const writer = fs.createWriteStream("C:\\Users\\perso\\Desktop\\Website\\HyunsukErickson\\HyunsukErickson\\assets\\img\\work\\" + count + ".jpeg");
+    const writer = fs.createWriteStream("C:\\Users\\perso\\Desktop\\Website\\HyunsukErickson\\HyunsukErickson\\assets\\img\\sculptures\\" + count + ".jpeg");
       response.data.pipe(writer);
 
     count++;

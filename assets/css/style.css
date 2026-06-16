@@ -280,6 +280,7 @@ img.socialmedia {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;  
     padding: 0;
+    anchor-scope: --my-carousel;
     anchor-name: --my-carousel;
     scroll-marker-group: after;
 
@@ -290,7 +291,6 @@ img.socialmedia {
     flex: 1;
     scroll-snap-align: center;
 }
-
 .art li:nth-child(even) {
     background-color: #eeeeee;
 }
