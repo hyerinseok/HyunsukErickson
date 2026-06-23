@@ -143,18 +143,18 @@ p, li {
     background-image: url(../img/installations/0.jpeg);
   }
   60%, 80% {
-    background-image: url(../img/sculptures/0.jpeg);
+    background-image: url(../img/installations/1.jpeg);
   }
   80%, 100% {
-    background-image: url(../img/paintings/0.jpeg);
+    background-image: url(../img/installations/2.jpeg);
   }
 }
 
 #main_image:before {
-    animation: slideShow 15s infinite;
-    transition: 3s ease-in-out infinite; /* Smooths out asset changes */
+    animation: slideShow 20s step-start infinite;
+    /* transition: 3s ease-in-out linear; Smooths out asset changes */
     transform: translateZ(-0.5px) scale(2);
-    height: -webkit-fill-available;
+    background-size: cover;
     
 }
 
@@ -251,11 +251,13 @@ img.socialmedia {
 .intro {
     position: relative;
     display: grid;
+    grid-template-columns: auto auto;
     margin: 0;
 }
 
 .intro>* {
     padding: 5px;
+    margin: auto;
 }
 
 .intro img {
@@ -264,6 +266,8 @@ img.socialmedia {
     border-radius: 5px;
     background: rgba(240, 230, 220, .7);
     box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+    margin: 10px;
+    padding: 10px;
 }
 
 .resume_body {
@@ -275,17 +279,47 @@ img.socialmedia {
     transform-style: inherit;
 }
 
+.art {
+    padding: 5vw 0;
+}
+
 .art>h1,.art>p, .art>img{
-    width: -webkit-fill-available;
+    max-width: 100%;
     padding: 0 10%;
+    max-height: 90vh;
+}
+
+.art > .double {
+    padding: 0 10%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0;
+}
+
+.art > .triple {
+    padding: 0 10%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 0;
+}
+
+.art > .double > img, .art > .triple > img {
+    max-width: 100%;
+    max-height: 90vh;
+    margin: auto;
 }
 
 .art ul {
-    width: 100vw;
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;  
     padding: 0;
+    margin: 0 10%;
+    width: 80vw;
+    height: 10vw;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;  
     anchor-scope: --my-carousel;
     anchor-name: --my-carousel;
     scroll-marker-group: after;
@@ -293,16 +327,14 @@ img.socialmedia {
 }
 .art li {
     list-style-type: none;
-    background-color: #eeeeee;
     scroll-snap-align: center;
 }
-.art li:nth-child(even) {
-    background-color: #eeeeee;
-}
+
 .art li img{
-    height: 50vw;
+    height: 10vw;
     padding: 5px;
 }
+
 .art ul::scroll-button(*) {
     border: 0;
     font-size: 2rem;
@@ -324,6 +356,7 @@ img.socialmedia {
     opacity: 0.2;
     cursor: unset;
 }
+/*
 .art ul::scroll-button(left) {
     content: "◄" / "Previous";
 }
@@ -336,14 +369,14 @@ img.socialmedia {
     position-anchor: --my-carousel;
 }
 .art ul::scroll-button(left) {
-    left: calc(anchor(left));
+    left: calc(anchor(left) + 10vw);
     top: calc(anchor(top));
     height: 50vw;
     width: 8vw;
 }
 
 .art ul::scroll-button(right) {    
-    right: calc(anchor(right));
+    right: calc(anchor(right) + 10vw);
     top: calc(anchor(top));
     height: 50vw;
     width: 8vw;
@@ -358,8 +391,9 @@ img.socialmedia {
     gap: 20px;
 }
 
+*/
 .horizontal-scroll {
-    width: 100vw;          /* Restricts the box width */
+    width: 90vw;          /* Restricts the box width */
     overflow-x: auto;     /* Adds horizontal scrollbar when items overflow */
     overflow-y: hidden;
     white-space: nowrap;  /* Prevents child elements from breaking to the next line */
@@ -441,6 +475,13 @@ img.socialmedia {
     img.socialmedia {
         margin: 2px;
         float: none;
+    }
+
+    .intro {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
     }
 
     .intro img {
